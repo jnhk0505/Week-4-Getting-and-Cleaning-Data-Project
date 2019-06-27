@@ -1,3 +1,7 @@
+## June Kieu
+## June 27th 2019
+## Getting and Cleaning Data Project
+
 rm(list = ls())
 unzip(zipfile="C:/Users/June Kieu/Downloads/getdata_projectfiles_UCI HAR Dataset.zip",exdir="C:/Users/June Kieu/Desktop/Studying R/datasciencecoursera/Week 4 Cleaning Data Project")
 path <- file.path("C:/Users/June Kieu/Desktop/Studying R/datasciencecoursera/Week 4 Cleaning Data Project", "UCI HAR Dataset")
@@ -5,11 +9,11 @@ path <- file.path("C:/Users/June Kieu/Desktop/Studying R/datasciencecoursera/Wee
 files <- list.files(path,recursive = TRUE)
 #import training set (7352 rows, 561 columns)
 xtrain <- read.table(file.path(path,"train","X_train.txt"),header = FALSE)
-#import training labels (6)
+#import training labels (6 different values)
 ytrain <- read.table(file.path(path,"train","y_train.txt"),header = FALSE)
 #import testing set (2947 rows, 561 columns)
 xtest <- read.table(file.path(path,"test","X_test.txt"),header = FALSE)
-#import testing labels (6)
+#import testing labels (6 different values)
 ytest <- read.table(file.path(path,"test","y_test.txt"),header = FALSE)
 #subjects in training set
 subjecttrain <- read.table(file.path(path,"train","subject_train.txt"),header = FALSE)
