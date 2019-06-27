@@ -20,13 +20,13 @@ Here are the data for the project:
 
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 
-###Steps to process
+### Steps to process
 
 * First, download and unzip the data file.
 * Second, copy *run_analysis.R* to your own machine.
 * Finally, execute *run_analysis.R* to generate final tidy data file.
 
-###Required Packages
+### Required Packages
 
 ```
 sqldf, dplyr
