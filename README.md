@@ -2,8 +2,7 @@
 title: " Week 4 Getting and Cleaning Data Project ReadMe"
 author: "June Kieu"
 date: "June 27, 2019"
-output: html_document
-keep_md: yes
+
 ---
 
 # Project Purpose
