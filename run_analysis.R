@@ -44,6 +44,21 @@ tv_set1 <- tv_set[,selected_columns==TRUE]
 #Uses descriptive activity names to name the activities in the data set
 require(sqldf)
 tv_set2 <- sqldf("select a.activityType,b.* from activity_labels as a left join tv_set1 as b on a.activityId=b.activityId")
+##descriptive activity names
+tv_names <- colnames(tv_set2)
+tv_names <- gsub("-", "", tv_names)
+tv_names <- gsub("()-", "", tv_names)
+tv_names <- gsub("\\(\\)", "", tv_names)
+tv_names <- gsub("^t", "timeDomain", tv_names)
+tv_names <- gsub("^f", "frequencyDomain", tv_names)
+tv_names <- gsub("Acc", "Accelerometer", tv_names)
+tv_names <- gsub("std", "StandardDeviation", tv_names)
+tv_names <- gsub("Gyro", "Gyroscope", tv_names)
+tv_names <- gsub("Freq", "Frequency", tv_names)
+tv_names <- gsub("mean", "Mean", tv_names)
+tv_names <- gsub("Mag", "Magnitude", tv_names)
+tv_names <- gsub("BodyBody", "Body", tv_names)
+colnames(tv_set2) <- tv_names
 #Creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 require(dplyr)
 finalTidySet <- tv_set2 %>%
