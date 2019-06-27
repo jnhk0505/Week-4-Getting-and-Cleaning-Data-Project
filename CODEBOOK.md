@@ -2,16 +2,15 @@
 title: " Week 4 Getting and Cleaning Data Project CodeBook"
 author: "June Kieu"
 date: "June 27, 2019"
-output: html_document
-keep_md: yes
+
 ---
 
 ## Project Description
 The purpose of this project is to demonstrate my ability to collect, work with, and clean a data set. The goal is to prepare tidy data that can be used for later analysis. 
 
-##Study design and data processing
+## Study design and data processing
 
-###Data Source
+### Data Source
 Source data: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 
 Description of the dataset from the source website: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
@@ -20,12 +19,12 @@ The experiments have been carried out with a group of 30 volunteers within an ag
 
 The sensor signals (accelerometer and gyroscope) were pre-processed by applying noise filters and then sampled in fixed-width sliding windows of 2.56 sec and 50% overlap (128 readings/window). The sensor acceleration signal, which has gravitational and body motion components, was separated using a Butterworth low-pass filter into body acceleration and gravity. The gravitational force is assumed to have only low frequency components, therefore a filter with 0.3 Hz cutoff frequency was used. From each window, a vector of features was obtained by calculating variables from the time and frequency domain.
 
-###Notes on the original data 
+### Notes on the original data 
 Please refer to README.TXT, which goes with other data tables for detailed description of original data.
 
-##Creating the tidy datafile
+## Creating the tidy datafile
 
-###All Steps are done by "run_analysis.R":
+### All Steps are done by *run_analysis.R*:
 1. Merges the training and the test sets to create one data set. The combined set is called tv_set. Train set has 7,352 observations and test set has 2,947 observations.   
 
 2. Appropriately labels tv_set with descriptive variable names.
